@@ -1,5 +1,5 @@
 # Go-Raider
-Discord Raid Tool Fast/Proxyless/Instant Join No Captcha!  raider/joiner
+Discord Raid Tool Fast/Instant Join No Captcha!  raider/joiner
 
 star ⭐ For support !
 
@@ -18,7 +18,7 @@ Discord Raider
 ```ruby
 Go Raider
 
-Token Joiner With TLS And Works Proxyless
+Token Joiner With TLS And Works with or without Proxies
 Tokens Should Be Fresh/aged NEVER Used For raiding before and unflagged
 Tokens Raid proxyless and uses goroutines for high speeds! 
 Tokens Dont Lock and No Captcha / Very Fast Join speed
