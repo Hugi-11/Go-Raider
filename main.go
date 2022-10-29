@@ -213,7 +213,7 @@ func Hex(x string) (string, error) {
 }
 
 
-  func  Build_Xheader() structs {
+func  Build_Xheader() structs {
 	Xheader := structs{}
 	xconststr := `{"location":"Invite Button Embed","location_guild_id":null,"location_channel_id":"","location_channel_type":3,"location_message_id":""}`
 	xpropsstr := `{"os":"Windows","browser":"Discord Client","release_channel":"stable","client_version":"1.0.9006","os_version":"10.0.22000","os_arch":"x64","system_locale":"en-US","client_build_number":151638,"client_event_source":null}`
