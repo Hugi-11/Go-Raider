@@ -19,6 +19,7 @@ Discord Raider
 Go Raider
 
 Token Joiner With TLS And Works Proxyless
+Tokens Should Be Fresh/aged NEVER Used For raiding before and unflagged
 Tokens Raid proxyless and uses goroutines for high speeds! 
 Tokens Dont Lock and No Captcha / Very Fast Join speed
 
