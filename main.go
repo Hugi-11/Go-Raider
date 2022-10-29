@@ -13,7 +13,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	"net/url"
+	//"net/url"
 	"os"
 	"os/exec"
 	"sync"
@@ -47,13 +47,13 @@ var (
 
 
 func joiner(token string, invite string) {
-	p, _ := url.Parse("http://" + proxy)
+	//p, _ := url.Parse("http://" + proxy)
 	Client := &http.Client{
 		Transport: &http.Transport{
 			TLSClientConfig: &tls.Config{
 				MaxVersion: tls.VersionTLS13,
 			},
-			Proxy: http.ProxyURL(p),
+			//Proxy: http.ProxyURL(p),
 		},
 	}
 	payload := map[string]string{}
@@ -293,8 +293,11 @@ func main() {
 		var wg sync.WaitGroup
 		wg.Add(len(lines))
 		for i := 0; i < len(lines); i++ {
-			joiner(lines[i], inv)
+			go func(i int) {
+				joiner(lines[i], inv)
+			}(i)
 		}
+		select{}
 	} else if choice == "2" {
 		fmt.Print("	["+c+">"+r+"] Channel ID: ")
 		scn.Scan()
