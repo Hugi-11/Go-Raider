@@ -1,0 +1,10 @@
+{
+    "Raider": {
+        "interval": "0",
+        "hex": "10" 
+    },
+    "Joiner" : {
+        "Proxy": "!{residentialproxy}!"
+    }
+
+}
