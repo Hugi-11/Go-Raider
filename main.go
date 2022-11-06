@@ -53,7 +53,7 @@ func joiner(token string, invite string) {
 			TLSClientConfig: &tls.Config{
 				MaxVersion: tls.VersionTLS13,
 			},
-			//Proxy: http.ProxyURL(p),
+			//Proxy: http.ProxyURL(p), 		//remove the  "//" if you want to use proxies
 		},
 	}
 	payload := map[string]string{}
