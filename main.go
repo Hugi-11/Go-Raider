@@ -111,14 +111,15 @@ func raider(token string, channel string, message string) {
 			},
 		},
 	}
-	hex := config().Raider.Hex
-	hx,_ := Hex(hex)
-	payload := map[string]string{
-		"content": message + " | " + hx,
-	}
-	xp,_ := json.Marshal(payload)
-	interval := config().Raider.Interval
+
 	for true {
+		hex := config().Raider.Hex
+		hx,_ := Hex(hex)
+		payload := map[string]string{
+			"content": message + " | " + hx,
+		}
+		xp,_ := json.Marshal(payload)
+		interval := config().Raider.Interval
 		time.Sleep(time.Duration(interval))
 		req, err := http.NewRequest("POST", "https://discord.com/api/v9/channels/"+channel+"/messages", bytes.NewBuffer(xp))
 		cerr(err)
