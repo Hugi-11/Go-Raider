@@ -45,7 +45,7 @@ var (
 	Cookies = "__dcfduid=" + Build_cookie().Dcfd + "; " + "__sdcfduid=" + Build_cookie().Sdcfd + "; "
 	
 	//p, _ := url.Parse("http://" + proxy) 			//remove the  "//" if you want to use proxies
-	Client := &http.Client{
+	Client = &http.Client{
 		Transport: &http.Transport{
 			TLSClientConfig: &tls.Config{
 				MaxVersion: tls.VersionTLS13,
