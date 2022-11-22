@@ -104,13 +104,6 @@ func joiner(token string, invite string) {
 
 
 func raider(token string, channel string, message string) {
-	Client := &http.Client{
-		Transport: &http.Transport{
-			TLSClientConfig: &tls.Config{
-				MaxVersion: tls.VersionTLS13,
-			},
-		},
-	}
 	hex := config().Raider.Hex
 	interval := config().Raider.Interval
 	for true {
