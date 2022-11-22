@@ -43,11 +43,8 @@ var (
 	r = "\033[39m"
 	proxy = config().Joiner.Proxy
 	Cookies = "__dcfduid=" + Build_cookie().Dcfd + "; " + "__sdcfduid=" + Build_cookie().Sdcfd + "; "
-)
-
-
-func joiner(token string, invite string) {
-	//p, _ := url.Parse("http://" + proxy)
+	
+	//p, _ := url.Parse("http://" + proxy) 			//remove the  "//" if you want to use proxies
 	Client := &http.Client{
 		Transport: &http.Transport{
 			TLSClientConfig: &tls.Config{
@@ -56,6 +53,10 @@ func joiner(token string, invite string) {
 			//Proxy: http.ProxyURL(p), 		//remove the  "//" if you want to use proxies
 		},
 	}
+)
+
+
+func joiner(token string, invite string) {
 	payload := map[string]string{}
 	xp,_ := json.Marshal(payload)
 	Cookie := Build_cookie()
@@ -157,13 +158,6 @@ func raider(token string, channel string, message string) {
 
 
 func Build_cookie() structs {
-	Client := &http.Client{
-		Transport: &http.Transport{
-			TLSClientConfig: &tls.Config{
-				MaxVersion: tls.VersionTLS13,
-			},
-		},
-	}
 	req, err := http.NewRequest("GET", "https://discord.com", nil)
 	if err != nil {
 		cerr(err)
