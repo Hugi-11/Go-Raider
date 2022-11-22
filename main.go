@@ -27,7 +27,7 @@ type structs struct {
 		Hex 	 string `json:"hex"`
 	} `json:"Raider"`
 	Joiner struct {
-		Proxy 	 string `json:"proxy"`
+		Proxy 	 string `json:"Proxy"`
 	} `json:"Joiner"`
 	
 	Time    float64
