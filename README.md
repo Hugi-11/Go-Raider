@@ -1,4 +1,4 @@
-# Go-Raider  - NEW: https://github.com/yaboipy/go-massdm
+# Go-Raider  - !USE!: https://github.com/yaboipy/go-massdm
 Discord Raid Tool Fast/Instant Join No Captcha!  raider/joiner
 
 star ⭐ For support !
